@@ -13,7 +13,7 @@
                 }
                 $cadenaFinal = $cadenaFinal.$letra." ";
             } 
-            }
+    }
             $tokens = strtok(" ");
         
         return $cadenaFinal;
