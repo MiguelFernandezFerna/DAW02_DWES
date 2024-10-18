@@ -7,6 +7,7 @@
         $alternar = true;
         for ($i = 0; $i<strlen($frase); $i++) {
             if ($frase[$i]=== " ") {
+                //El .= sirve para concaternar strings
                 $fraseCani.= " ";
             } else {
                 if ($alternar) {
@@ -14,6 +15,13 @@
                 } else {
                     $frase[$i] = strtolower($frase[$i]);
                 }
+                /*Esta línea de abajo equivale a:
+                if ($alternar){
+                    $alternar = false;
+                }else{
+                    $alternar = true;
+                }
+                */
                 $alternar = $alternar ? false : true; 
             }
         }
