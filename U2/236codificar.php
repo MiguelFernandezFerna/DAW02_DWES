@@ -5,10 +5,11 @@
 // Si se sale del abecedario, debe volver a empezar
 // Hay que respetar los espacios, puntos y comas.
 
-$num=2;
+$num=4;
 $frase = ".Juan Luis. es, un buen profesor Zz,";
 
 function cambiar($frase, $num) {
+    $numFinal=0;
     $salida = "";
     for ($i = 0;$i<strlen($frase);$i++) {
         //con ord cogemos el numero de la tabla ascii correspondiente a la letra

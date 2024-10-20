@@ -12,9 +12,11 @@
         while (strlen($contraseña)<$tamaños) {
             //creo una variable contador para que en vez de ser todo minusculas alterne con las mayusculas
             if ($cont%2==0) {
+                //aquí cogemos un caracter ramdom utilizando la funcion rand, y poniendo que se encuentre entre los números que corresponden a los caracteres ascii de las minusculas
                 $letra = chr(rand(97, 122));
                 $contraseña.=$letra;
             }else {
+                //aquí cogemos un caracter ramdom utilizando la funcion rand, y poniendo que se encuentre entre los números que corresponden a los caracteres ascii de las mayusculas
                 $letra = chr(rand(65, 90));
                 $contraseña.=$letra;
             }
