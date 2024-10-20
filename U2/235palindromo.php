@@ -11,6 +11,7 @@ $frase = "Anita, la gorda lagartona, no traga la droga latina";
         for ($i=0; $i < strlen($frases); $i++) {
             $letra = $frases[$i];
             $letra = htmlentities($letra);
+            //Ponemos todas en minusculas para que no afecte al palindromo
             $letra = strtolower($letra); 
             if ($letra!=" "&&$letra!=","&&$letra!=".") {
                 $fraseEspacios.=$letra;
