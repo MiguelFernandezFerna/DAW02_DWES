@@ -16,9 +16,11 @@
     echo "La cantidad de letras que hay en la frase es $contLetra<br>";
     echo "La cantidad de palabras que hay en la frase es $contPalabra<br><br>";
 
+    //Para llamar al strtok por primera vez ponemos el string para iniciarlo, y el separador o token, que separará el string en strings mas pequeños 
     $tokens = strtok($frase, " ");
     while ($tokens!=false) {
         echo "$tokens, el tamaño: ".strlen($tokens)."<br>";
+        //La siguiente llamada ya no necesita el string, porque ya está iniciado, solo necesita el separador para pasar al siguiente token
         $tokens = strtok(" ");
     }
 
