@@ -11,15 +11,18 @@
     <p>Escribe un programa que muestre los números pares del 0 al 50 (dentro de una lista desordenada). Modifica el programa para que le demos el valor máximo por URL.</p>
     <?php
     $pares=[];
+    $capacidad = $_GET["capacidad"];
     $maximo=$_GET["max"];
-    while(count($pares)<intval($maximo/2)+1){
-        $num=rand(0,50);
-    if($num%2==0){
-        if(in_array($num, $pares)==false)
-        array_push($pares, $num);
+    $cont = 0;
+    while ($cont<$capacidad) {
+        $num = rand(0,$maximo);
+        if ($num%2==0) {
+            array_push($pares,$num);
+            $cont++;
+        }
     }
-    }
-        print_r($pares);
+
+    print_r($pares);
     ?>
 </body>
 </html>
