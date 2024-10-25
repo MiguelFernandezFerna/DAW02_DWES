@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <form action="301datosPersonales.php" method="post" enctype="multipart/form-data">    
+        <form action="301datosPersonales.php" method="POST" enctype="multipart/form-data">    
             <label for="nombre">nombre: </label>
             <input id = "nombre" name = "nombre" type = "text">
             <br><br>
@@ -38,11 +38,11 @@
             </select>
             <br><br>
             <label for="idiomas">Idiomas: </label>
-            <input type="checkbox" name="idiomas" value="español" checked="checked">Español</input>
-            <input type="checkbox" name="idiomas" value="inglés">Inglés</input>
-            <input type="checkbox" name="idiomas" value="francés">Francés</input>
-            <input type="checkbox" name="idiomas" value="aleman">Alemán</input>
-            <input type="checkbox" name="idiomas" value="otro">Otro</input>
+            <input type="checkbox" name="idiomas[]" value="español" checked="checked">Español</input>
+            <input type="checkbox" name="idiomas[]" value="ingles">Inglés</input>
+            <input type="checkbox" name="idiomas[]" value="frances">Francés</input>
+            <input type="checkbox" name="idiomas[]" value="aleman">Alemán</input>
+            <input type="checkbox" name="idiomas[]" value="otro">Otro</input>
             <br><br>
             <label for="foto">Foto: </label>
             <input type="file" name="foto">
@@ -50,7 +50,7 @@
             <label for="curriculum">Currículum: </label>
             <input type="file" name="curriculum">
             <br><br>
-            <input type="submit" value="Subir formulario">
+            <input type="submit" name="submit" value="Subir formulario">
         </form>
     </body>
 </html>
