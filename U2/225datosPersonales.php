@@ -5,8 +5,8 @@
         $email = $_GET["mail"];
         $año_nac = $_GET["añoNac"];
         $telefono = $_GET["telefono"];
-         echo 
-         "<table border='solid' cellspacing='0'>
+        echo 
+        "<table border='solid' cellspacing='0'>
             <tr>
                 <th>Nombre</th>
                 <th>Primer apellido</th>
@@ -23,5 +23,5 @@
                 <td>$año_nac</td>
                 <td>$telefono</td>
             </tr>
-         </table>";
+        </table>";
     ?>  

@@ -10,7 +10,7 @@
     <h1>Ejercicio 216</h1>
     <p>Muestra dentro de una tabla HTML la tabla de multiplicar del número que reciba como parámetro por URL. Utiliza <thead> con sus respectivos <th> y <tbody> para dibujar la tabla.</p>
     <?php
-         $multiplicar=$_GET["num"];
+        $multiplicar=$_GET["num"];
     ?>
     <h3>Tabla del 
         <?php
