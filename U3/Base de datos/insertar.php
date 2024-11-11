@@ -2,13 +2,13 @@
 include("conexion.php");
 
 $conexion = conectar();
-$nombre = "Miguel";//$_POST["nombre"];
-$apellidos = "Fernandez";//$_POST["apellidos"];
-$telefono = 666999888;//$_POST["telefono"];
+$nombre = $_POST["nombre"];
+$apellidos = $_POST["apellidos"];
+$telefono = $_POST["telefono"];
 
 $consultaInsert=$conexion->prepare("insert into persona(nombre, apellidos, telefono) value(?,?,?)");
 
-$consultaInsert->bind_param("ssi", $nombre, $apellidos, $telefono);
+$consultaInsert->bind_param("sss", $nombre, $apellidos, $telefono);
 
 if ($consultaInsert->execute()) {
     echo "Datos insertados: <br>";
@@ -18,5 +18,5 @@ if ($consultaInsert->execute()) {
 } else {
     echo "Error, no se ha podido insertar";
 }
-
+echo $conexion->error;
 $conexion->close();
