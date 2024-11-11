@@ -11,12 +11,9 @@ $consultaInsert=$conexion->prepare("insert into persona(nombre, apellidos, telef
 $consultaInsert->bind_param("sss", $nombre, $apellidos, $telefono);
 
 if ($consultaInsert->execute()) {
-    echo "Datos insertados: <br>";
-    echo $nombre."<br>";
-    echo $apellidos."<br>";
-    echo $telefono."<br>";
+    header("Location: listar_personas.php");
 } else {
-    echo "Error, no se ha podido insertar";
+    echo "Error al insertar";
 }
 echo $conexion->error;
 $conexion->close();
