@@ -1,0 +1,20 @@
+table{
+    position: absolute;
+    background-color: #f8f9fa;
+    font-family: Arial, Helvetica, sans-serif;
+}
+th{
+    padding: 20px;
+    text-align: center;
+}
+tbody tr{
+    border: solid;
+    border-color: white;
+    background-color: white;
+}
+
+td{
+    padding: 10px;
+    text-align: center;
+}
+
