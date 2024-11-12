@@ -17,7 +17,7 @@
         //recorremos cada resultado que se nos devuelve
         foreach ($listaPersonas as $persona) {
             echo "
-            $persona[id]
+            $persona[id_persona]
             $persona[nombre]
             $persona[apellidos]
             $persona[telefono]
