@@ -22,7 +22,7 @@
         echo "<th>Telefono</th>";
         foreach ($listaPersonas as $persona) {
             echo "<tr>";
-            echo "<td>$persona[id]</td>";
+            echo "<td>$persona[id_persona]</td>";
             echo "<td>$persona[nombre]</td>";
             echo "<td>$persona[apellidos]</td>";
             echo "<td>$persona[telefono]</td>";
