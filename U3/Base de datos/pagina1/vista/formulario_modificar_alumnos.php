@@ -15,7 +15,7 @@
                 include("../config/conexion.php");
 
                 $conexion=conexion();
-                $idRecogido = 3;//$_GET["id_alumno"];
+                $idRecogido = 2;//$_GET["id_alumno"];
 
                 $cambiarAlumno = $conexion->prepare("select * from alumnos where id_alumno =?");
                 $cambiarAlumno->bind_param("i",$idRecogido);
@@ -25,15 +25,29 @@
                 //obtenemos solo una fila, que será la primera
                     $resultado = $cambiarAlumno->get_result();
                     $usuario = $resultado->fetch_assoc();
+                    echo "<input type=hidden name=id_alumno value=$idRecogido>";
                     echo "
                     <label for=dni>DNI:</label>
                     <input type=text id=dni name=dni value=$usuario[dni]><br>";
-                    echo "$usuario[nombre]<br>";
-                    echo "$usuario[apellido1]
-                        <br>$usuario[apellido2]<br>";
-                    echo "$usuario[email]<br>";
-                    echo "$usuario[telefono]<br>";
-                    echo "$usuario[curso]<br>";
+                    echo "
+                    <label for=nombre id=nombre>Nombre:</label>
+                    <input type=text id=nombre name=nombre value=$usuario[nombre]><br>";
+                    echo "
+                    <label for='apellido1' id='apellido1'>Apellido 1:</label>
+                    <input type='text' id='apellido1' name='apellido1' value=$usuario[apellido1]><br>";
+                    echo "
+                    <label for='apellido2' id='apellido2'>Apellido 2:</label>
+                    <input type='text' id='apellido2' name='apellido2' value=$usuario[apellido2]><br>";
+                    echo "
+                    <label for='email' id='email'>Email:</label>
+                    <input type='text' id='email' name='email' value=$usuario[email]><br>";
+                    echo "
+                    <label for=telefono>Telefono:</label>
+                    <input type=text name=telefono id=telefono value=$usuario[telefono]><br>";
+                    echo "
+                    <label for=curso>Curso:</label>
+                    <input type=text id=curso name=curso value=$usuario[curso]><br>";
+                    echo "<input type='submit' value=Enviar><br>";
                 } else {
                     echo "Error de visualización";
                 }
@@ -43,26 +57,6 @@
                 
             ?>
             
-
-            <label for='nombre' id='nombre'>Nombre:</label>
-            <input type='text' id='nombre' name='nombre' value="Miguel"><br>
-    
-            <label for='apellido1' id='apellido1'>Apellido 1:</label>
-            <input type='text' id='apellido1' name='apellido1'><br>
-
-            <label for='apellido2' id='apellido2'>Apellido 2:</label>
-            <input type='text' id='apellido2' name='apellido2'><br>
-
-            <label for="email">Email:</label>
-            <input type="text" name="email" id="email"><br>
-    
-            <label for='telefono' id='telefono'>Telefono:</label>
-            <input type='text' id='telefono' name='telefono'><br>
-
-            <label for="curso">Curso:</label>
-            <input type="text" id="curso" name="curso"><br>
-    
-            <input type='submit' value="Enviar"><br>
         </form>
     </main>
     <footer>

@@ -1,8 +1,9 @@
 <?php
     include("../config/conexion.php");
 
-    $conexion = conectar();
+    $conexion = conexion();
 
+    $id_alumno=$_POST["id_alumno"];
     $dni = $_POST["dni"];
     $nombre = $_POST["nombre"];
     $apellido1 = $_POST["apellido1"];
@@ -11,13 +12,13 @@
     $telefono = $_POST["telefono"];
     $curso = $_POST["curso"];
 
-    $actualizar = $conexion->prepare("update persona set dni = ?, nombre = ?, apellido1=?, apellido2 = ?, email = ?, telefono = ?, curso = ? where id_alumno = ?");
+    $actualizar = $conexion->prepare("update alumnos set dni = ?, nombre = ?, apellido1=?, apellido2 = ?, email = ?, telefono = ?, curso = ? where id_alumno = ?");
     //Importante, ponerlo todo en el mismo orden
-    $actualizar->bind_param("sssssis", $dni,$nombre,$apellido1,$apellido2,$email,$telefono,$curso);
+    $actualizar->bind_param("sssssisi", $dni,$nombre,$apellido1,$apellido2,$email,$telefono,$curso,$id_alumno);
     $actualizar->execute();
 
     if ($actualizar) {
-        header("Location: CRUD_principal.php");
+        header("Location: ../vista/CRUD_principal.php");
     }else{
         echo "No se ha ejecutado";
     }
