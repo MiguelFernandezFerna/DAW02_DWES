@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="pagina1Estilo.css">
 </head>
 <body>
+    <button id="Insertar"><a href="formulario_agregar_alumno.php" id="insertar">Insertar</a></button>
     <table>
         <thead>
             <th>ID_ALUMNO</th>
@@ -21,7 +22,7 @@
         </thead>
         <tbody>
             <?php
-                include("funcionesCRUD.php");
+                include("visualizarAlumnos.php");
                 visualizarDatos();
             ?>
         </tbody>

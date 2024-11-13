@@ -1,7 +1,9 @@
 table{
     position: absolute;
-    background-color: #f8f9fa;
+    background-color: #E6FEFF;
     font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5px;
+    margin-top: 10px;
 }
 th{
     padding: 20px;
@@ -16,5 +18,17 @@ tbody tr{
 td{
     padding: 10px;
     text-align: center;
+}
+
+#insertar{
+    text-decoration: none;
+    color: gray;
+    padding: 10px;
+    font-size: large;
+}
+
+#Insertar{
+    margin-left: 400px;
+
 }
 
