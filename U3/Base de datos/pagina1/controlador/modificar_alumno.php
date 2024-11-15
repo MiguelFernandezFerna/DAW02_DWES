@@ -18,7 +18,7 @@
     $actualizar->execute();
 
     if ($actualizar) {
-        header("Location: ../vista/CRUD_principal.php");
+        header("Location: ../vista/listar_alumnos.php");
     }else{
         echo "No se ha ejecutado";
     }

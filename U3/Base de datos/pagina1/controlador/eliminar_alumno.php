@@ -7,6 +7,6 @@
     $eliminar ->bind_param("i",$id_alumno);
     $eliminar->execute();
 
-    header("Location: ../vista/CRUD_principal.php");
+    header("Location: ../vista/listar_alumnos.php");
 
     $conexion->close();

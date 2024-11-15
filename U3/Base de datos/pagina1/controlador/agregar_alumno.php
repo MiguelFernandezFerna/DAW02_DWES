@@ -15,7 +15,7 @@
     $consultaInsert->bind_param("sssssis", $dni,$nombre,$apellido1,$apellido2,$email,$telefono,$curso);
 
     if ($consultaInsert->execute()) {
-        header("Location: ../vista/CRUD_principal.php");
+        header("Location: ../vista/listar_alumnos.php");
     } else {
         echo "Error al insertar";
     }
