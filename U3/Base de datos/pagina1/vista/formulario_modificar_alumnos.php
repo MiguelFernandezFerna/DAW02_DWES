@@ -15,7 +15,7 @@
                 include("../config/conexion.php");
 
                 $conexion=conexion();
-                $idRecogido = 2;//$_GET["id_alumno"];
+                $idRecogido = $_GET["id_alumno"];
 
                 $cambiarAlumno = $conexion->prepare("select * from alumnos where id_alumno =?");
                 $cambiarAlumno->bind_param("i",$idRecogido);

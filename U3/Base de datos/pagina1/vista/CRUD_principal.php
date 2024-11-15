@@ -10,7 +10,6 @@
     <button id="Insertar"><a href="formulario_agregar_alumno.php" id="insertar">Insertar</a></button>
     <table>
         <thead>
-            <th>ID_ALUMNO</th>
             <th>DNI</th>
             <th>Nombre</th>
             <th>Apellidos</th>

@@ -20,15 +20,26 @@ td{
     text-align: center;
 }
 
-#insertar{
+a{
     text-decoration: none;
-    color: gray;
     padding: 10px;
+    color: white;
     font-size: large;
 }
 
 #Insertar{
     margin-left: 400px;
+    background-color: blue;
+    border-radius: 15px;
+}
 
+#Modificar{
+    background-color: blue;
+    border-radius: 15px;
+}
+
+#eliminar{
+    background-color: blue;
+    border-radius: 15px;
 }
 

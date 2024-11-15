@@ -13,7 +13,6 @@
     if ($numRegistros>0) {
         foreach ($listaAlumnos as $alumno) {
             echo "<tr>";
-            echo "<td>$alumno[id_alumno]</td>";
             echo "<td>$alumno[dni]</td>";
             echo "<td>$alumno[nombre]</td>";
             echo "<td>$alumno[apellido1]
@@ -21,6 +20,8 @@
             echo "<td>$alumno[email]</td>";
             echo "<td>$alumno[telefono]</td>";
             echo "<td>$alumno[curso]</td>";
+            echo "<td><button id=Modificar><a href=formulario_modificar_alumnos.php?id_alumno=$alumno[id_alumno]>Modificar</a></button></td>";
+            echo "<td><button id=eliminar><a href=../controlador/eliminar_alumno.php?id_alumno=$alumno[id_alumno]>Eliminar</a></button></td>";
             echo "</tr>";
         }
     } else {
