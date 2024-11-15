@@ -29,17 +29,9 @@ a{
 
 #Insertar{
     margin-left: 400px;
+}
+
+button{
     background-color: blue;
     border-radius: 15px;
 }
-
-#Modificar{
-    background-color: blue;
-    border-radius: 15px;
-}
-
-#eliminar{
-    background-color: blue;
-    border-radius: 15px;
-}
-
