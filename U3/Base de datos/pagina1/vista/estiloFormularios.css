@@ -1,0 +1,49 @@
+
+form{
+    position: absolute;
+    padding: 15px;
+    border: solid;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #008B8B,#E0FFFF);
+    border-color: 	#2F4F4F;
+}
+input{
+    border-radius: 5px;
+}
+#dni{
+    width: 190px;
+}
+
+#nombre{
+    width: 165px;
+}
+#apellido1{
+    width: 150px;
+}
+#apellido2{
+    width: 150px;
+}
+#email{
+    width: 179px;
+}
+#telefono{
+    width: 161px;
+}
+#curso{
+    width: 179px;
+}
+
+#enviar{
+    margin-left: 70px;
+    background-color: #00BFFF;
+    color: white;
+    font-size: medium;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+
+footer{
+    position: absolute;
+    margin-top: 350px;
+}

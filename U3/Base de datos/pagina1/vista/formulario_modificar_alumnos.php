@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modificar usuario</title>
+    <link rel="stylesheet" href="estiloFormularios.css">
 </head>
 <body>
     <header>
@@ -28,26 +29,26 @@
                     echo "<input type=hidden name=id_alumno value=$idRecogido>";
                     echo "
                     <label for=dni>DNI:</label>
-                    <input type=text id=dni name=dni value=$usuario[dni]><br>";
+                    <input type=text id=dni name=dni value=$usuario[dni]><br><br>";
                     echo "
                     <label for=nombre id=nombre>Nombre:</label>
-                    <input type=text id=nombre name=nombre value=$usuario[nombre]><br>";
+                    <input type=text id=nombre name=nombre value=$usuario[nombre]><br><br>";
                     echo "
                     <label for='apellido1' id='apellido1'>Apellido 1:</label>
-                    <input type='text' id='apellido1' name='apellido1' value=$usuario[apellido1]><br>";
+                    <input type='text' id='apellido1' name='apellido1' value=$usuario[apellido1]><br><br>";
                     echo "
                     <label for='apellido2' id='apellido2'>Apellido 2:</label>
-                    <input type='text' id='apellido2' name='apellido2' value=$usuario[apellido2]><br>";
+                    <input type='text' id='apellido2' name='apellido2' value=$usuario[apellido2]><br><br>";
                     echo "
                     <label for='email' id='email'>Email:</label>
-                    <input type='text' id='email' name='email' value=$usuario[email]><br>";
+                    <input type='text' id='email' name='email' value=$usuario[email]><br><br>";
                     echo "
                     <label for=telefono>Telefono:</label>
-                    <input type=text name=telefono id=telefono value=$usuario[telefono]><br>";
+                    <input type=text name=telefono id=telefono value=$usuario[telefono]><br><br>";
                     echo "
                     <label for=curso>Curso:</label>
-                    <input type=text id=curso name=curso value=$usuario[curso]><br>";
-                    echo "<input type='submit' value=Enviar><br>";
+                    <input type=text id=curso name=curso value=$usuario[curso]><br><br>";
+                    echo "<input type='submit' value=Enviar id=enviar><br>";
                 } else {
                     echo "Error de visualización";
                 }
