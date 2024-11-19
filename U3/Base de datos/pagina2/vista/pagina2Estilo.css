@@ -1,0 +1,21 @@
+table{
+    position: absolute;
+    background-color: #E6FEFF;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5px;
+    margin-top: 10px;
+}
+th{
+    padding: 20px;
+    text-align: center;
+}
+tbody tr{
+    border: solid;
+    border-color: white;
+    background-color: white;
+}
+
+td{
+    padding: 10px;
+    text-align: center;
+}
