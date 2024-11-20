@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="pagina2Estilo.css">
 </head>
 <body>
-    <button id="Insertar">Insertar</button>
+<button id="Insertar"><a href="formulario_agregar_proyecto.php" id="insertar">Insertar</a></button>
     <table>
         <thead>
             <th>ID</th>

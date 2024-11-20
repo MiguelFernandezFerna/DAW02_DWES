@@ -1,0 +1,51 @@
+form{
+    position: absolute;
+    padding: 10px;
+    border: solid;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #008B8B,#E0FFFF);
+    border-color: 	#2F4F4F;
+}
+input{
+    border-radius: 5px;
+}
+#titulo{
+    width: 190px;
+}
+
+#descripcion{
+    width: 165px;
+}
+#periodo{
+    width: 150px;
+}
+#curso{
+    width: 150px;
+}
+#fecha_presentacion{
+    width: 179px;
+}
+#nota{
+    width: 161px;
+}
+#logotipo{
+    width: 179px;
+}
+#pdf_proyecto{
+    width: 179px;
+}
+
+#enviar{
+    margin-left: 70px;
+    background-color: #00BFFF;
+    color: white;
+    font-size: medium;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+
+footer{
+    position: absolute;
+    margin-top: 370px;
+}

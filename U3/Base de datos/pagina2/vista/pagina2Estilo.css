@@ -19,3 +19,19 @@ td{
     padding: 10px;
     text-align: center;
 }
+
+a{
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    font-size: large;
+}
+
+#Insertar{
+    margin-left: 400px;
+}
+
+button{
+    background-color: blue;
+    border-radius: 15px;
+}
