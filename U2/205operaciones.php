@@ -1,6 +1,7 @@
 <?php
     $a=4;
     $b=2;
+    echo '$a = 4 y $b = 2;<br>';
     echo 'Estas con las operaciones aritméticas: ';
     echo '<br>';
     echo '-$a: '.$c = -$a;	//Negación	Opuesto de $a.

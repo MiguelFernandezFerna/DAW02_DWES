@@ -16,7 +16,7 @@ echo "<br>";
 if ($num==5) {
     echo "El número es: $num";
 } else if ($num>5) {
-   echo "El número es mayor al deseado";
+    echo "El número es mayor al deseado";
 }else {
     echo "El número es menos al deseado";
 }
