@@ -1,4 +1,5 @@
 <?php
+//si el parentesis de capitales no tiene nada, entonces aparecerán todos
     function capitales($paises=""){
         $capitales=[
             "España"=>"Madrid",

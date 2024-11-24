@@ -17,10 +17,12 @@
         $menor=101;
         $media=0;
         $numeros=[];
+        //genera el array
         for ($i=0; $i < 33; $i++) { 
             $num=rand(0,100);
             array_push($numeros,$num);
         }
+        //calculamos la media, el numero menor, y el numero mayor
         for ($i=0; $i < count($numeros); $i++) { 
             $media = $media+$numeros[$i];
             if ($numeros[$i]<$menor) {

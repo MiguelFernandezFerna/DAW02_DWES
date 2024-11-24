@@ -1,4 +1,5 @@
 <?php
+//los 32 puntos sirven para meter ahí un número indefinido de valores luego a la hora de llamar al método
     function mayor(...$a){
         $mayor =$a[0];
         $array = func_get_args();

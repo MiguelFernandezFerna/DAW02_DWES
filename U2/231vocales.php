@@ -2,6 +2,7 @@
 //231vocales.php: a partir de una frase, devuelve la cantidad de cada una de las vocales, y el total de ellas.
     $frase = "eres un lamebicho y un mamañena";
     $contadorTotal = 0;
+    //el substr_count lo que hace es de una cadena, contar cuantas veces aparece algún caracter, que indicamos también dentro de su parentesis
     $a = substr_count($frase,"a");
     $e = substr_count($frase,"e");
     $i = substr_count($frase,"i");
