@@ -1,1 +1,1 @@
-DAW2
+DNI: 71973946T, Nombre: Miguel, Apellido 1: Fernández, Apellido 2: González, Email: miguel@gmail.com, Telefono: 640520175, Curso: DAW2<br><br>DNI: 12345678U, Nombre: Javier, Apellido 1: Álvarez, Apellido 2: Centeno, Email: javixy@gmail.com, Telefono: 618537210, Curso: DAW2<br><br>DNI: 87654221R, Nombre: Ana, Apellido 1: Gonzalez, Apellido 2: Gutierrez, Email: anaI@gmail.com, Telefono: 564967382, Curso: DAW1<br><br>DNI: 35967327H, Nombre: Alvaro, Apellido 1: Gonzalez, Apellido 2: Estrella, Email: alvaro@gmail.com, Telefono: 472649684, Curso: DAW2<br><br>
