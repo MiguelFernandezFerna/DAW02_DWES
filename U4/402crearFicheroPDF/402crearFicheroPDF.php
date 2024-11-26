@@ -17,7 +17,7 @@
     //creamos el objeto de la clase deseada
     $pdf = new PDF();
     $pdf ->AddPage();
-    $pdf->Cell(140,50,"You you yiovani, impredecible");
+    $pdf->Cell(70,80,"You you yiovani, impredecible");
     $pdf ->Write(45,"Para ir a la siguiente pagina pulse ");
     $link = $pdf->AddLink();
     $pdf->Write(45,"AQUI",$link);

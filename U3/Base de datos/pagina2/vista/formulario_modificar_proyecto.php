@@ -45,9 +45,6 @@
                     <label for=nota>Nota:</label>
                     <input type=text name=nota id=nota value=$usuario[nota]><br><br>";
                     echo "
-                    <label for=logotipo>Logotipo:</label>
-                    <input type=file id=logotipo name=logotipo value=$usuario[logotipo]><br><br>";
-                    echo "
                     <label for='pdf_proyecto' id='pdf_proyecto'>PDF Proyecto:</label>
                     <input type='text' id='pdf_proyecto' name='pdf_proyecto' value=$usuario[pdf_proyecto]><br><br>";
                     echo "<input type='submit' value=Enviar id=enviar><br>";
