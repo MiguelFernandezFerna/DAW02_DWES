@@ -19,6 +19,9 @@
             <th>Nota</th>
             <th>Logotipo</th>
             <th>PDF_Proyecto</th>
+            <th>Modulo 1</th>
+            <th>Modulo 2</th>
+            <th>Modulo 3</th>
             <th>Modificar</th>
             <th>Eliminar</th>
         </thead>

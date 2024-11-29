@@ -36,6 +36,15 @@
             <label for='pdf_proyecto' id='pdf_proyecto'>PDF Proyecto:</label>
             <input type='text' id='pdf_proyecto' name='pdf_proyecto'><br><br>
 
+            <label for="modulo1" id="modulo1">Modulo 1: </label>
+            <input type="text" id="modulo1" name="modulo1"><br><br>
+
+            <label for="modulo2" id="modulo2">Modulo 2: </label>
+            <input type="text" id="modulo2" name="modulo2"><br><br>
+
+            <label for="modulo3" id="modulo3">Modulo 3: </label>
+            <input type="text" id="modulo3" name="modulo3"><br><br>
+
             <input type='submit' value="Enviar" id="enviar"><br>
         </form>
     </main>

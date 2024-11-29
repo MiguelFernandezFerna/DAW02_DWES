@@ -11,8 +11,11 @@
         $nota=$_POST["nota"];
         $logotipo=file_get_contents($_FILES["logotipo"]['tmp_name']);
         $pdf_proyecto=$_POST["pdf_proyecto"];
+        $modulo1 = $_POST["modulo1"];
+        $modulo2 = $_POST["modulo2"];
+        $modulo3 = $_POST["modulo3"];
 
-        $sql = "insert into proyecto (titulo, curso, periodo, descripcion, fecha_presentacion, nota, logotipo, pdf_proyecto) values (:titulo, :curso, :periodo, :descripcion, :fecha_presentacion, :nota, :logotipo, :pdf_proyecto)";
+        $sql = "insert into proyecto (titulo, curso, periodo, descripcion, fecha_presentacion, nota, logotipo, pdf_proyecto, modulo1, modulo2, modulo3) values (:titulo, :curso, :periodo, :descripcion, :fecha_presentacion, :nota, :logotipo, :pdf_proyecto, :modulo1, :modulo2, :modulo3)";
         $sentencia = $conexion->prepare($sql);
 
         $sentencia->bindParam(':titulo', $titulo, PDO::PARAM_STR);
@@ -23,6 +26,9 @@
         $sentencia->bindParam(':nota', $nota, PDO::PARAM_INT);
         $sentencia->bindParam(':logotipo', $logotipo, PDO::PARAM_LOB);
         $sentencia->bindParam(':pdf_proyecto', $pdf_proyecto, PDO::PARAM_STR);
+        $sentencia->bindParam(':modulo1',$modulo1,PDO::PARAM_STR);
+        $sentencia->bindParam(':modulo2',$modulo2,PDO::PARAM_STR);
+        $sentencia->bindParam(':modulo3',$modulo3,PDO::PARAM_STR);
 
         //Ejecuto la consulta
         $resultado=$sentencia->execute();
