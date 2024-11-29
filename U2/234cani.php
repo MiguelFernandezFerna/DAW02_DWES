@@ -15,14 +15,12 @@
                 } else {
                     $frase[$i] = strtolower($frase[$i]);
                 }
-                /*Esta línea de abajo equivale a:
                 if ($alternar){
                     $alternar = false;
                 }else{
                     $alternar = true;
                 }
-                */
-                $alternar = $alternar ? false : true; 
+                
             }
         }
         return $frase;
