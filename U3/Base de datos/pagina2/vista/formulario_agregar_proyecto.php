@@ -45,9 +45,25 @@
             <label for="modulo3" id="modulo3">Modulo 3: </label>
             <input type="text" id="modulo3" name="modulo3"><br><br>
 
-            <label for="alumno" id="alumno">Alumno</label>
-            <input type="text" id="alumno" name="alumno"><br><br>
+            <?php
+                include("../config/conexion.php");
 
+                $conectar = conexion();
+                $consulta = "select * from alumnos";
+                $sentencia = $conectar -> prepare($consulta);
+                $sentencia -> setFetchMode(PDO::FETCH_ASSOC);
+                $sentencia -> execute();
+                $listaAlumnos = $sentencia -> fetchAll();
+            ?>
+            <label for="alumno" id="alumno">Alumno:</label>
+            <select name="alumno" id="alumno"]>
+            <?php 
+                foreach ($listaAlumnos as $alumno){?>
+                    <option value=<?=$alumno["id_alumno"]?>>
+                        <?=$alumno["nombre"]?>
+                    </option>
+            <?php ;}?>
+            </select><br><br>
             <input type='submit' value="Enviar" id="enviar"><br>
         </form>
     </main>
