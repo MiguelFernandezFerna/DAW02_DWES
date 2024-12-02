@@ -25,6 +25,7 @@
             echo "<td>$proyecto[modulo1]</td>";
             echo "<td>$proyecto[modulo2]</td>";
             echo "<td>$proyecto[modulo3]</td>";
+            echo "<td>$proyecto[alumno]</td>";
             echo "<td><button><a href='formulario_modificar_proyecto.php?id_proyecto=$proyecto[id_proyecto]'>Modificar</a></button></td>";
             echo "<td><button><a href='../controlador/eliminar.php?id_proyecto=$proyecto[id_proyecto]'>Eliminar</a></button></td>";
             echo "</tr>";

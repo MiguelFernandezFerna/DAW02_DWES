@@ -22,6 +22,7 @@
             <th>Modulo 1</th>
             <th>Modulo 2</th>
             <th>Modulo 3</th>
+            <th>Alumno</th>
             <th>Modificar</th>
             <th>Eliminar</th>
         </thead>
