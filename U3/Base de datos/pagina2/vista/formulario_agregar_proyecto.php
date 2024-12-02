@@ -55,7 +55,7 @@
                 $sentencia -> execute();
                 $listaAlumnos = $sentencia -> fetchAll();
             ?>
-            <label for="alumno" id="alumno">Alumno:</label>
+            <label for="alumno" id="alumno">Alumno: </label>
             <select name="alumno" id="alumno"]>
             <?php 
                 foreach ($listaAlumnos as $alumno){?>
