@@ -5,7 +5,7 @@
     }
 //si no tiene sesión te devuelve a la index
     if (!isset($_SESSION['usuario'])) {
-        header("Location: index_.php?loginEnIndex=true");
+        header("Location: index.php?loginEnIndex=true");
     }
 ?>
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado de productos</title>
+    <title>Pagina de los 2</title>
 </head>
 <body>
     <h1>Bienvenido <?= $_SESSION['usuario']?></h1>
@@ -23,6 +23,6 @@
         <li>Producto 1</li>
         <li>Producto 2</li>
     </ul>
-    <p>Pulse <a href="logout.php">aquí</a></p>
+    <p>Pulse <a href="../controlador/logout.php">aquí</a></p>
 </body>
 </html>

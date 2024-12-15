@@ -5,5 +5,5 @@
     session_unset();
     //destruimos sesion
     session_destroy();
-    header("Location: index_.php");
+    header("Location: ../vista/index.php");
 ?>
