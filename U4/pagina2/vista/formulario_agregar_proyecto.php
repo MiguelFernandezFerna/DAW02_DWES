@@ -56,11 +56,27 @@
                 $listaAlumnos = $sentencia -> fetchAll();
             ?>
             <label for="alumno" id="alumno">Alumno: </label>
-            <select name="alumno" id="alumno"]>
+            <select name="alumno" id="alumno">
             <?php 
                 foreach ($listaAlumnos as $alumno){?>
                     <option value=<?=$alumno["id_alumno"]?>>
                         <?=$alumno["nombre"]?>
+                    </option>
+            <?php ;}?>
+            </select><br><br>
+            <?php
+                $consulta2 = "select * from tutor";
+                $sentencia2 = $conectar -> prepare($consulta2);
+                $sentencia2 -> setFetchMode(PDO::FETCH_ASSOC);
+                $sentencia2 -> execute();
+                $listaTutores = $sentencia2 -> fetchAll();
+            ?>
+            <label for="tutor" id="tutor">Tutor: </label>
+            <select name="tutor" id="tutor">
+            <?php 
+                foreach ($listaTutores as $tutor){?>
+                    <option value=<?=$tutor["id_tutor"]?>>
+                        <?=$tutor["nombre"]?>
                     </option>
             <?php ;}?>
             </select><br><br>

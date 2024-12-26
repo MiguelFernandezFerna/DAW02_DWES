@@ -23,6 +23,7 @@
             <th>Modulo 2</th>
             <th>Modulo 3</th>
             <th>Alumno</th>
+            <th>Tutor</th>
             <th>Modificar</th>
             <th>Eliminar</th>
         </thead>

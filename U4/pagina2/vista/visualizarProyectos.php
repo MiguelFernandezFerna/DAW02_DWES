@@ -4,7 +4,7 @@
     function visualizarDatos(){
         $conectar = conexion();
 
-        $consulta = "select p.*, a.nombre as nomAlum from proyecto p left outer join alumnos a on p.alumno=a.id_alumno";
+        $consulta = "select p.*, a.nombre as nomAlum, t.nombre as nomTutor from proyecto p left outer join alumnos a on p.alumno = a.id_alumno left outer join tutor t on p.tutor = t.id_tutor;";
         $sentencia = $conectar -> prepare($consulta);
         $sentencia -> setFetchMode(PDO::FETCH_ASSOC);
         $sentencia -> execute();
@@ -26,6 +26,7 @@
             echo "<td>$proyecto[modulo2]</td>";
             echo "<td>$proyecto[modulo3]</td>";
             echo "<td>$proyecto[nomAlum]</td>";
+            echo "<td>$proyecto[nomTutor]</td>";
             echo "<td><button><a href='formulario_modificar_proyecto.php?id_proyecto=$proyecto[id_proyecto]'>Modificar</a></button></td>";
             echo "<td><button><a href='../controlador/eliminar.php?id_proyecto=$proyecto[id_proyecto]'>Eliminar</a></button></td>";
             echo "</tr>";
