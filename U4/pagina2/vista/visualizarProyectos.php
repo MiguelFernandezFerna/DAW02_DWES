@@ -1,5 +1,26 @@
 <?php
-    include("../config/conexion.php");
+    include_once("../config/conexion.php");
+
+    function meterModulos($id,$con){
+        $sql = "select siglas from modulos where id_modulo = :id";
+    
+        try{
+            $stmt = $con -> prepare($sql);
+            $stmt -> setFetchMode(PDO::FETCH_OBJ);
+            $stmt -> bindValue(":id",$id,PDO::PARAM_INT);
+            $stmt -> execute();
+    
+            $modulo = $stmt -> fetch();
+            if($modulo -> siglas != ""){
+                return $modulo -> siglas;
+            }else{
+                return "";
+            }
+    
+        }catch(PDOException $e){
+            echo $e -> getMessage();
+        }
+    }
 
     function visualizarDatos(){
         $conectar = conexion();
@@ -22,9 +43,9 @@
             $logotipo = $proyecto["logotipo"];
             echo "<td><img class='logotipo' src='data:image/png;base64," . base64_encode($logotipo) . "' alt='imagen'width = 50px height = 50px/></td>";;
             echo "<td>$proyecto[pdf_proyecto]</td>";
-            echo "<td>$proyecto[modulo1]</td>";
-            echo "<td>$proyecto[modulo2]</td>";
-            echo "<td>$proyecto[modulo3]</td>";
+            echo "<td>".meterModulos($proyecto["modulo1"],$conectar)."</td>";
+            echo "<td>".meterModulos($proyecto["modulo2"],$conectar)."</td>";
+            echo "<td>".meterModulos($proyecto["modulo3"],$conectar)."</td>";
             echo "<td>$proyecto[nomAlum]</td>";
             echo "<td>$proyecto[nomTutor]</td>";
             echo "<td><button><a href='formulario_modificar_proyecto.php?id_proyecto=$proyecto[id_proyecto]'>Modificar</a></button></td>";

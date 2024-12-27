@@ -1,6 +1,6 @@
 <?php
     function conexion(){
-        $servidor = 'mysql:dbname=prueba;host=localhost';
+        $servidor = 'mysql:dbname=gestion_alumnos;host=localhost';
     $usuario = 'root';
     $contraseña = '';
     try {

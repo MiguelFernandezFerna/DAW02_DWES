@@ -6,12 +6,12 @@
         $nombreUsuario=$_POST["login"];
         $contrasena=$_POST["password"];
         $contrasenaNueva = password_hash($contrasena, PASSWORD_DEFAULT);
-        $tipoUsuario=$_POST["tipo_usu"];
-        $correo = "admin@gmail.com";
-        $nombre = "Miguel";
-        $apellido = "Fernández Fernández";
+        $tipoUsuario=2;
+        $correo = $_POST["correo"];
+        $nombre = $_POST["nombre"];
+        $apellido = $_POST["apellidos"];
         $baja = false;
-        $activar = true;
+        $activar = false;
 
         $sql = "insert into tutor (login, password, correo, nombre, apellidos, tipo_usu, baja, activar) values (:login, :password, :correo, :nombre, :apellidos, :tipo_usu, :baja, :activar)";
         $sentencia = $conexion->prepare($sql);
@@ -27,7 +27,8 @@
 
         //Ejecuto la consulta
         $resultado=$sentencia->execute();
-                header("Location:../vista/index.php");
+        $conexion=null;
+        header("Location:../vista/inicioSesion.php");
 
         if($resultado==true){
             echo "Datos insertados";

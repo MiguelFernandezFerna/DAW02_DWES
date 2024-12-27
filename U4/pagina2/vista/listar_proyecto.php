@@ -1,3 +1,11 @@
+<?php
+//Si no hay sesion la inicia
+    session_start();
+//si no tiene sesión te devuelve a la index
+    if (!isset($_SESSION['usuario'])) {
+        header("Location: inicioSesion.php?loginEnIndex=true");
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -34,5 +42,6 @@
             ?>
         </tbody>
     </table>
+    <button id="borrar"><a href="../controlador/logout.php">Cerrar sesión</a></button>
 </body>
 </html>

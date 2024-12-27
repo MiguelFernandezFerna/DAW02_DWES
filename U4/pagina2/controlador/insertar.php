@@ -28,9 +28,9 @@
         $sentencia->bindParam(':nota', $nota, PDO::PARAM_INT);
         $sentencia->bindParam(':logotipo', $logotipo, PDO::PARAM_LOB);
         $sentencia->bindParam(':pdf_proyecto', $pdf_proyecto, PDO::PARAM_STR);
-        $sentencia->bindParam(':modulo1',$modulo1,PDO::PARAM_STR);
-        $sentencia->bindParam(':modulo2',$modulo2,PDO::PARAM_STR);
-        $sentencia->bindParam(':modulo3',$modulo3,PDO::PARAM_STR);
+        $sentencia->bindParam(':modulo1',$modulo1,PDO::PARAM_INT);
+        $sentencia->bindParam(':modulo2',$modulo2,PDO::PARAM_INT);
+        $sentencia->bindParam(':modulo3',$modulo3,PDO::PARAM_INT);
         $sentencia->bindParam(':alumno',$alumno,PDO::PARAM_STR);
         $sentencia->bindParam(':tutor', $tutor,PDO::PARAM_STR);
 
