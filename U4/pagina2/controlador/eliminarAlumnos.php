@@ -3,13 +3,13 @@
     $conexion = conexion();
 
     try {
-    $sql = "delete from proyecto where id_proyecto = :id_proyecto";
+    $sql = "delete from alumnos where id_alumno = :id_alumno";
 
     $sentencia = $conexion->prepare($sql);
 
-    $id_proyecto = $_GET["id_proyecto"];
+    $id_alumno = $_GET["id_alumno"];
 
-    $sentencia ->bindParam(':id_proyecto', $id_proyecto,PDO::PARAM_INT);
+    $sentencia ->bindParam(':id_alumno', $id_alumno,PDO::PARAM_INT);
 
     $result = $sentencia->execute();
     header("Location: ../vista/paginaAdmin.php");

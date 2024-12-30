@@ -1,5 +1,4 @@
 table{
-    position: absolute;
     background-color: #E6FEFF;
     font-family: Arial, Helvetica, sans-serif;
     padding-left: 5px;
@@ -28,7 +27,8 @@ a{
 }
 
 #Insertar{
-    margin-left: 400px;
+    position: absolute;
+    margin-left: 300px;
 }
 
 button{
@@ -37,5 +37,23 @@ button{
 }
 
 #borrar{
-    margin-left: 1140px;
+    position: absolute;
+    margin-left: 600px;
+    margin-top: -50px;
+    width: 150px;
+}
+#cajaGrande{
+    display: flex;
+    flex-direction: column;
+}
+
+#cajaAlumno{
+    display: flex;
+    flex-direction: row;
+}
+
+#insertarAlumno{
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 10px;
 }

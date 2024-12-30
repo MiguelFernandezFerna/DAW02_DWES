@@ -129,6 +129,7 @@
             <?php ;}?>
             </select><br><br>
             <input type='submit' value="Enviar" id="enviar"><br>
+            <button><a href='../vista/paginaAdmin.php'>Cancelar</a></button>
         </form>
     </main>
     <footer>

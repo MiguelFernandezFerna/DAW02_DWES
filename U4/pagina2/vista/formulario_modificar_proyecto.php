@@ -153,6 +153,7 @@
                     }
                     echo "</select><br><br>";
                     echo "<input type='submit' value='Enviar' id='enviar'><br>";
+                    echo "<button><a href='../vista/paginaAdmin.php'>Cancelar</a></button>";
                 } else {
                     echo "Error de visualización";
                 }

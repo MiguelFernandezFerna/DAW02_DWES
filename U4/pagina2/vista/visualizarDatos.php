@@ -22,7 +22,7 @@
         }
     }
 
-    function visualizarDatos(){
+    function visualizarProyectos(){
         $conectar = conexion();
 
         $consulta = "select p.*, a.nombre as nomAlum, t.nombre as nomTutor from proyecto p left outer join alumnos a on p.alumno = a.id_alumno left outer join tutor t on p.tutor = t.id_tutor;";
@@ -33,7 +33,6 @@
         $listaProyecto = $sentencia -> fetchAll();
         foreach ($listaProyecto as $proyecto) {
             echo "<tr>";
-            echo "<td>$proyecto[id_proyecto]</td>";
             echo "<td>$proyecto[titulo]</td>";
             echo "<td>$proyecto[curso]</td>";
             echo "<td>$proyecto[periodo]</td>";
@@ -53,4 +52,65 @@
             echo "</tr>";
         }
     $conectar=null;
+}
+
+function visualizarTutores(){
+    $conectar = conexion();
+
+    $consulta = "select * from tutor";
+    $sentencia = $conectar -> prepare($consulta);
+    $sentencia -> setFetchMode(PDO::FETCH_ASSOC);
+    $sentencia -> execute();
+
+    $listaTutores = $sentencia -> fetchAll();
+    foreach ($listaTutores as $tutores) {
+        echo "<tr>";
+        echo "<td>$tutores[nombre]</td>";
+        echo "<td>$tutores[apellidos]</td>";
+        echo "<td>$tutores[correo]</td>";
+        if ($tutores["tipo_usu"] == 1) {
+            echo "<td>Administrador</td>";
+        } else {
+            echo "<td>Tutor</td>";
+        }
+        if ($tutores["baja"]==0) {
+            echo "<td><button><a href='../controlador/Baja.php?id_tutor=$tutores[id_tutor]'>Baja</a></button></td>";
+        } else {
+            echo "<td><button><a href='../controlador/Alta.php?id_tutor=$tutores[id_tutor]'>Alta</a></button></td>";
+        }
+        
+        if ($tutores["activar"]==0) {
+            echo "<td><button><a href='../controlador/Habilitar.php?id_tutor=$tutores[id_tutor]'>Habilitar</a></button></td>";
+        } else {
+            echo "<td><button><a href='../controlador/Deshabilitar.php?id_tutor=$tutores[id_tutor]'>Deshabilitar</a></button></td>";
+        }
+        
+        echo "</tr>";
+    }
+$conectar=null;
+}
+
+function visualizarAlumnos(){
+    $conectar = conexion();
+
+    $consulta = "select * from alumnos";
+    $sentencia = $conectar -> prepare($consulta);
+    $sentencia -> setFetchMode(PDO::FETCH_ASSOC);
+    $sentencia -> execute();
+
+    $listaAlumnos = $sentencia ->fetchAll();
+
+    foreach ($listaAlumnos as $alumno) {
+        echo "<tr>";
+            echo "<td>$alumno[dni]</td>";
+            echo "<td>$alumno[nombre]</td>";
+            echo "<td>$alumno[apellido1]</td>";
+            echo "<td>$alumno[apellido2]</td>";
+            echo "<td>$alumno[email]</td>";
+            echo "<td>$alumno[telefono]</td>";
+            echo "<td>$alumno[curso]</td>";
+            echo "<td><button><a href='formulario_modificar_alumno.php?id_alumno=$alumno[id_alumno]'>Modificar</a></button></td>";
+            echo "<td><button><a href='../controlador/eliminarAlumnos.php?id_alumno=$alumno[id_alumno]'>Eliminar</a></button></td>";
+        echo "</tr>";
+    }
 }

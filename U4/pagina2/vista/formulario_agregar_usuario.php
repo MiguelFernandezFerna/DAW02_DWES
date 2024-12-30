@@ -28,6 +28,7 @@
             <input type="text" id="apellidos" name="apellidos"><br><br>
 
             <input type='submit' value="Enviar" id="enviar"><br>
+            <button><a href="../vista/paginaAdmin.php"></a>Cancelar</button>
         </form>
     </main>
     <footer>

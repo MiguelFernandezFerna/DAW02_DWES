@@ -37,7 +37,7 @@
         //ejecutamos
         $resultado = $sentencia->execute();
         if ($resultado) {
-            header("Location: ../vista/listar_proyecto.php");
+            header("Location: ../vista/paginaAdmin.php");
         }
     } catch (PDOException $e) {
         echo $e ->getMessage();

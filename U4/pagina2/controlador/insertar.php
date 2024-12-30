@@ -36,7 +36,7 @@
 
         //Ejecuto la consulta
         $resultado=$sentencia->execute();
-                header("Location:../vista/listar_proyecto.php");
+                header("Location:../vista/paginaAdmin.php");
 
         if($resultado==true){
             echo "Datos insertados";

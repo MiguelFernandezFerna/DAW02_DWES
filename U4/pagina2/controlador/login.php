@@ -33,12 +33,12 @@
                         session_start();
                         $_SESSION['usuario'] = $usuario;
                         $conectar=null;
-                        header("Location:../vista/listar_proyecto.php");
+                        header("Location:../vista/paginaAdmin.php");
                     }else{
                         session_start();
                         $_SESSION['usuario'] = $usuario;
                         $conectar=null;
-                        header("Location:../vista/listar_proyecto.php");
+                        header("Location:../vista/paginaAdmin.php");
                     }
                 }else{
                     $error = "Contraseña incorrecta";
