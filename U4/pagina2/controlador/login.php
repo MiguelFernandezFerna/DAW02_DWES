@@ -29,17 +29,24 @@
                 $comprobada = password_verify($password, $usuarios["password"]);
                 
                 if ($comprobada == true) {
-                    if ($usuarios["tipo_usu"]==1) {
-                        session_start();
-                        $_SESSION['usuario'] = $usuario;
-                        $conectar=null;
-                        header("Location:../vista/paginaAdmin.php");
-                    }else{
-                        session_start();
-                        $_SESSION['usuario'] = $usuario;
-                        $conectar=null;
-                        header("Location:../vista/paginaAdmin.php");
+                    if ($usuarios["activar"]==1) {
+                        if ($usuarios["tipo_usu"]==1) {
+                            session_start();
+                            $_SESSION['usuario'] = $usuario;
+                            $conectar=null;
+                            header("Location:../vista/paginaAdmin.php");
+                        }else{
+                            session_start();
+                            $_SESSION['usuario'] = $usuario;
+                            $conectar=null;
+                            header("Location:../vista/paginaTutor.php");
+                        }
+                    } else {
+                        $error = "Usuario inactivo, espere activación";
+                    $conectar=null;
+                    include "../vista/inicioSesion.php";
                     }
+                    
                 }else{
                     $error = "Contraseña incorrecta";
                     $conectar=null;

@@ -11,8 +11,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD CON PDO</title>
-    <link rel="stylesheet" href="pagina2Estilo.css">
+    <title>Página de administradores</title>
+    <link rel="stylesheet" href="paginaAdminEstilo.css">
 </head>
 <body>
     <h1>Bienvenido a la zona de Administradores</h1>
@@ -46,7 +46,7 @@
     </table>
     
 
-    <h2 id="tutores">Listado de tutores: </h2>
+    <h2 id="tutores">Listado de tutores total: </h2>
     <table>
         <thead>
             <th>Nombre</th>
@@ -62,6 +62,21 @@
             ?>
         </tbody>
     </table>
+    <h2 id="tutoresActivos">Listado de tutores activos: </h2>
+    <table>
+        <thead>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Correo electrónico</th>
+            <th>Tipo de tutor</th>
+        </thead>
+        <tbody>
+            <?php
+                visualizarTutoresActivos();
+            ?>
+        </tbody>
+    </table>
+
     <div id="cajaAlumno">
     <h2 id="alumnos">Listado de alumnos:</h2>
     <button id="insertarAlumno"><a href="formulario_agregar_alumno.php" id="insertar">Nuevo alumno</a></button>
