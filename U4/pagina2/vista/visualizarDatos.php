@@ -165,8 +165,7 @@ function cogerUsuarioTutor($sesion){
             echo "<td>".meterModulos($proyecto["modulo2"],$conectar)."</td>";
             echo "<td>".meterModulos($proyecto["modulo3"],$conectar)."</td>";
             echo "<td>$proyecto[nomAlum]</td>";
-            echo "<td>$proyecto[nomTutor]</td>";
-            echo "<td><button><a href='formulario_modificar_proyecto.php?id_proyecto=$proyecto[id_proyecto]'>Modificar</a></button></td>";
+            echo "<td><button><a href='formulario_modificar_proyecto_tutor.php?id_proyecto=$proyecto[id_proyecto]'>Modificar</a></button></td>";
             echo "<td><button><a href='../controlador/eliminar.php?id_proyecto=$proyecto[id_proyecto]'>Eliminar</a></button></td>";
             echo "</tr>";
     }
@@ -201,6 +200,64 @@ function visualizarProyectosPorTutor(){
             echo "<td><button><a href='formulario_modificar_proyecto.php?id_proyecto=$proyecto[id_proyecto]'>Modificar</a></button></td>";
             echo "<td><button><a href='../controlador/eliminar.php?id_proyecto=$proyecto[id_proyecto]'>Eliminar</a></button></td>";
             echo "</tr>";
+    }
+$conectar=null;
+}
+
+function visualizarAlumnosPorTutor($sesion){
+    $conectar = conexion();
+
+    $consulta = "select p.alumno, p.tutor, a.*, t.id_tutor from proyecto p left outer join alumnos a on p.alumno=a.id_alumno left outer join tutor t on p.tutor = t.id_tutor where t.login = :login";
+    $sentencia = $conectar -> prepare($consulta);
+    $sentencia ->bindParam(':login', $sesion, PDO::PARAM_STR);
+    $sentencia -> setFetchMode(PDO::FETCH_ASSOC);
+    $sentencia -> execute();
+
+    $listaAlumnos = $sentencia -> fetchAll();
+
+    foreach ($listaAlumnos as $alumno) {
+        echo "<tr>";
+            echo "<td>$alumno[dni]</td>";
+            echo "<td>$alumno[nombre]</td>";
+            echo "<td>$alumno[apellido1]</td>";
+            echo "<td>$alumno[apellido2]</td>";
+            echo "<td>$alumno[email]</td>";
+            echo "<td>$alumno[telefono]</td>";
+            echo "<td>$alumno[curso]</td>";
+        echo "</tr>";
+    }
+}
+
+function cogerUsuarioTutorSinCompletar($sesion){
+    $conectar = conexion();
+
+    $consulta = "select p.*, a.nombre as nomAlum, t.nombre as nomTutor, t.login as login from proyecto p left outer join alumnos a on p.alumno = a.id_alumno left outer join tutor t on p.tutor = t.id_tutor where login = :login;";
+    $sentencia = $conectar -> prepare($consulta);
+    $sentencia ->bindParam(':login', $sesion, PDO::PARAM_STR);
+    $sentencia -> setFetchMode(PDO::FETCH_ASSOC);
+    $sentencia -> execute();
+
+    $listaProyecto = $sentencia -> fetchAll();
+    foreach ($listaProyecto as $proyecto) {
+        if ($proyecto["completado"]==0) {
+            echo "<tr>";
+            echo "<td>$proyecto[titulo]</td>";
+            echo "<td>$proyecto[curso]</td>";
+            echo "<td>$proyecto[periodo]</td>";
+            echo "<td>$proyecto[descripcion]</td>";
+            echo "<td>$proyecto[fecha_presentacion]</td>";
+            echo "<td>$proyecto[nota]</td>";
+            $logotipo = $proyecto["logotipo"];
+            echo "<td><img class='logotipo' src='data:image/png;base64," . base64_encode($logotipo) . "' alt='imagen'width = 50px height = 50px/></td>";;
+            echo "<td>$proyecto[pdf_proyecto]</td>";
+            echo "<td>".meterModulos($proyecto["modulo1"],$conectar)."</td>";
+            echo "<td>".meterModulos($proyecto["modulo2"],$conectar)."</td>";
+            echo "<td>".meterModulos($proyecto["modulo3"],$conectar)."</td>";
+            echo "<td>$proyecto[nomAlum]</td>";
+            echo "<td><button><a href='formulario_modificar_proyecto_tutor.php?id_proyecto=$proyecto[id_proyecto]'>Modificar</a></button></td>";
+            echo "<td><button><a href='../controlador/completar.php?id_proyecto=$proyecto[id_proyecto]'>Completar</a></button></td>";
+            echo "</tr>";
+        }
     }
 $conectar=null;
 }

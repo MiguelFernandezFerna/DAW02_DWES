@@ -16,8 +16,9 @@
         $modulo3 = $_POST["modulo3"];
         $alumno = $_POST["alumno"];
         $tutor = $_POST["tutor"];
+        $completado = 0;
 
-        $sql = "insert into proyecto (titulo, curso, periodo, descripcion, fecha_presentacion, nota, logotipo, pdf_proyecto, modulo1, modulo2, modulo3, alumno, tutor) values (:titulo, :curso, :periodo, :descripcion, :fecha_presentacion, :nota, :logotipo, :pdf_proyecto, :modulo1, :modulo2, :modulo3, :alumno, :tutor)";
+        $sql = "insert into proyecto (titulo, curso, periodo, descripcion, fecha_presentacion, nota, logotipo, pdf_proyecto, modulo1, modulo2, modulo3, alumno, tutor, completado) values (:titulo, :curso, :periodo, :descripcion, :fecha_presentacion, :nota, :logotipo, :pdf_proyecto, :modulo1, :modulo2, :modulo3, :alumno, :tutor, :completado)";
         $sentencia = $conexion->prepare($sql);
 
         $sentencia->bindParam(':titulo', $titulo, PDO::PARAM_STR);
@@ -33,6 +34,7 @@
         $sentencia->bindParam(':modulo3',$modulo3,PDO::PARAM_INT);
         $sentencia->bindParam(':alumno',$alumno,PDO::PARAM_STR);
         $sentencia->bindParam(':tutor', $tutor,PDO::PARAM_STR);
+        $sentencia->bindParam(':completado', $completado,PDO::PARAM_INT);
 
         //Ejecuto la consulta
         $resultado=$sentencia->execute();

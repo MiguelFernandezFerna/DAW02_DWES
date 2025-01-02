@@ -17,8 +17,9 @@
 <body>
 <h1>Ha accedido a la zona privada de <?= $_SESSION['usuario']?></h1>
 <button id="borrar"><a href="../controlador/logout.php">Cerrar sesión</a></button>
+<button id="perfil"><a href="formulario_modificar_tutor.php?login=<?= $_SESSION['usuario']?>">Mi perfil</a></button>
 
-<h2>Proyectos </h2>
+<h2>Proyectos activos: </h2>
 <table>
         <thead>
             <th>Titulo</th>
@@ -33,14 +34,30 @@
             <th>Modulo 2</th>
             <th>Modulo 3</th>
             <th>Alumno</th>
-            <th>Tutor</th>
             <th>Modificar</th>
             <th>Eliminar</th>
         </thead>
         <tbody>
             <?php
                 include("visualizarDatos.php");
-                cogerUsuarioTutor($_SESSION['usuario']);
+                cogerUsuarioTutorSinCompletar($_SESSION['usuario']);
+            ?>
+        </tbody>
+    </table>
+    <h2>Alumnado asignado a los proyectos: </h2>
+    <table>
+        <thead>
+            <th>DNI</th>
+            <th>Nombre</th>
+            <th>Primer apellido</th>
+            <th>Segundo apellido</th>
+            <th>Email</th>
+            <th>Teléfono</th>
+            <th>Curso</th>
+        </thead>
+        <tbody>
+            <?php
+                visualizarAlumnosPorTutor($_SESSION['usuario']);
             ?>
         </tbody>
     </table>
