@@ -7,7 +7,7 @@
 //condiciona que si uno de los campos está vacío que salga un mensaje
         if (empty($usuario)||empty($password)) {
             $error = "Debes introducir un usuario y una contraseña";
-            include "../vista/index.php";
+            include "../vista/inicioSesion.php";
             //si el usuario y contraseña son correctos entra a la pagina main, 
             //y sino vuelve a la index con un mensaje 
             //de que no se ha encontrado el usuario
@@ -34,12 +34,12 @@
                             session_start();
                             $_SESSION['usuario'] = $usuario;
                             $conectar=null;
-                            header("Location:../vista/paginaAdmin.php");
+                            header("Location:../vista/admin/paginaAdmin.php");
                         }else{
                             session_start();
                             $_SESSION['usuario'] = $usuario;
                             $conectar=null;
-                            header("Location:../vista/paginaTutor.php");
+                            header("Location:../vista/tutor/paginaTutor.php");
                         }
                     } else {
                         $error = "Usuario inactivo, espere activación";
