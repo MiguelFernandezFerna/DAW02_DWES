@@ -9,6 +9,7 @@
 <body>
     <header>
         <h1>Procederemos a modificar un proyecto:</h1>
+        <button id="borrar"><a href="../../controlador/logout.php">Cerrar sesión</a></button>
     </header>
     <main>
         <form action="../../controlador/admin/modificar.php" method="post">
@@ -160,8 +161,5 @@
             
         </form>
     </main>
-    <footer>
-        <h4>Miguel Fernández</h4>
-    </footer>
 </body>
 </html>

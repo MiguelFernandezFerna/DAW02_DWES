@@ -1,3 +1,30 @@
+header{
+    text-align: center;
+    background-color: #E6FEFF;
+    padding: 10px 0px 10px 0px;
+    margin: -5px;
+}
+h1{
+    margin-left: 30px;
+}
+#proyectos{
+    margin-top: 10px;
+}
+#perfil{
+    position: absolute;
+    margin-left: 440px;
+    margin-top: -50px;
+}
+#zonaTutor{
+    position: absolute;
+    margin-left: 555px;
+    margin-top: -50px;
+}
+#volver{
+    position: absolute;
+    margin-left: 550px;
+    margin-top: -50px;
+}
 table{
     background-color: #E6FEFF;
     font-family: Arial, Helvetica, sans-serif;
@@ -28,7 +55,8 @@ a{
 
 #Insertar{
     position: absolute;
-    margin-left: 300px;
+    margin-left: 275px;
+    margin-top: 15px;
 }
 
 button{
@@ -38,7 +66,7 @@ button{
 
 #borrar{
     position: absolute;
-    margin-left: 600px;
+    margin-left: 700px;
     margin-top: -50px;
     width: 150px;
 }

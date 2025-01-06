@@ -35,9 +35,9 @@
         foreach ($listaProyecto as $proyecto) {
             echo "<tr>";
             echo "<td>$proyecto[titulo]</td>";
-            echo "<td>$proyecto[curso]</td>";
-            echo "<td>$proyecto[periodo]</td>";
             echo "<td>$proyecto[descripcion]</td>";
+            echo "<td>$proyecto[periodo]</td>";
+            echo "<td>$proyecto[curso]</td>";
             echo "<td>$proyecto[fecha_presentacion]</td>";
             echo "<td>$proyecto[nota]</td>";
             $logotipo = $proyecto["logotipo"];
@@ -60,7 +60,7 @@
     $conectar=null;
 }
 function pdf_conversion($con, $pdf, $datos){
-    $direccion = "../pdf/";
+    $direccion = "../../pdf/";
     $archivoSubido = $direccion . basename($pdf["pdf_proyecto"]["name"]);
 
     if (move_uploaded_file($pdf["pdf_proyecto"]["tmp_name"], $archivoSubido)) {
@@ -277,9 +277,9 @@ function cogerUsuarioTutorSinCompletar($sesion){
         if ($proyecto["completado"]==0) {
             echo "<tr>";
             echo "<td>$proyecto[titulo]</td>";
-            echo "<td>$proyecto[curso]</td>";
-            echo "<td>$proyecto[periodo]</td>";
             echo "<td>$proyecto[descripcion]</td>";
+            echo "<td>$proyecto[periodo]</td>";
+            echo "<td>$proyecto[curso]</td>";
             echo "<td>$proyecto[fecha_presentacion]</td>";
             echo "<td>$proyecto[nota]</td>";
             $logotipo = $proyecto["logotipo"];

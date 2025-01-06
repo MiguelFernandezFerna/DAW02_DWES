@@ -56,8 +56,5 @@
             
         </form>
     </main>
-    <footer>
-        <h4>Miguel Fernández</h4>
-    </footer>
 </body>
 </html>

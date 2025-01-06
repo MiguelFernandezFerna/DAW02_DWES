@@ -1,0 +1,53 @@
+header{
+    text-align: center;
+    background-color: #E6FEFF;
+    padding: 10px 0px 10px 0px;
+    margin: -5px;
+}
+
+form{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 750px;
+    width: 100px;
+    height: 100px;
+}
+legend{
+    background-color: lightgray;
+    border: solid;
+    border-radius: 8px;
+    border-width: 1px;
+}
+fieldset{
+    padding: 30px;
+    background: linear-gradient(to bottom, #008B8B,#E0FFFF);
+    border-color: 	#2F4F4F;
+}
+input{
+    border-radius: 8px;
+
+}
+button{
+    background-color: #00BFFF;
+    color: white;
+    font-size: medium;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+#enviar{
+    background-color: #00BFFF;
+    color: white;
+    font-size: medium;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+#cajaEnvios{
+    display: flex;
+    flex-direction: row;
+}
+a{
+    text-decoration: none;
+    color: white;
+}

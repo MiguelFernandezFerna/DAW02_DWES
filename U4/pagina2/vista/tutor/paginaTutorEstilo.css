@@ -1,3 +1,14 @@
+header{
+    text-align: center;
+    background-color: #E6FEFF;
+    padding: 10px 0px 10px 0px;
+    margin: -5px;
+}
+#perfil{
+    position: absolute;
+    margin-left: 440px;
+    margin-top: -50px;
+}
 table{
     background-color: #E6FEFF;
     font-family: Arial, Helvetica, sans-serif;
@@ -38,7 +49,7 @@ button{
 
 #borrar{
     position: absolute;
-    margin-left: 700px;
+    margin-left: 600px;
     margin-top: -50px;
     width: 150px;
 }

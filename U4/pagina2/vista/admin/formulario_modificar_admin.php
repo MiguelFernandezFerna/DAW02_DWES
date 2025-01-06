@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="../estiloFormularios.css">
 </head>
 <body>
+    <header>
+    <h1>Página de perfil</h1>
+    <button id="borrar"><a href="../../controlador/logout.php">Cerrar sesión</a></button>
+    </header>
     <main>
         <form action="../../controlador/admin/modificarAdmin.php" method="post">
             <?php
@@ -48,8 +52,5 @@
             
         </form>
     </main>
-    <footer>
-        <h4>Miguel Fernández</h4>
-    </footer>
 </body>
 </html>

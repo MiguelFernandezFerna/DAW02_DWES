@@ -15,11 +15,15 @@
     <link rel="stylesheet" href="paginaAdminEstilo.css">
 </head>
 <body>
+<header>
     <h1>Bienvenido a la zona de Administradores</h1>
+    <button id="borrar"><a href="../../controlador/logout.php">Cerrar sesión</a></button>
+    <button id="perfil"><a href="formulario_modificar_admin.php?login=<?= $_SESSION['usuario']?>">Mi perfi</a></button>
+<button id="zonaTutor"><a href="zonaTutor.php">Zona Tutor</a></button>
+</header>
+
 <button id="Insertar"><a href="formulario_agregar_proyecto.php" id="insertar">Nuevo proyecto</a></button>
-<button id="borrar"><a href="../../controlador/logout.php">Cerrar sesión</a></button>
-<button id="perfil"><a href="formulario_modificar_admin.php?login=<?= $_SESSION['usuario']?>">Mi perfi</a></button>
-<h2>Listado total de proyectos:</h2>
+<h2 id="proyectos">Listado total de proyectos:</h2>
     <table>
         <thead>
             <th>Titulo</th>
@@ -97,47 +101,6 @@
         <tbody>
             <?php
                 visualizarAlumnos();
-            ?>
-        </tbody>
-    </table>
-    <h2>Mis proyectos: </h2>
-<table>
-        <thead>
-            <th>Titulo</th>
-            <th>Descripción</th>
-            <th>Periodo</th>
-            <th>Curso</th>
-            <th>Fecha_presentacion</th>
-            <th>Nota</th>
-            <th>Logotipo</th>
-            <th>PDF_Proyecto</th>
-            <th>Modulo 1</th>
-            <th>Modulo 2</th>
-            <th>Modulo 3</th>
-            <th>Alumno</th>
-            <th>Modificar</th>
-            <th>Completar</th>
-        </thead>
-        <tbody>
-            <?php
-                cogerUsuarioTutorSinCompletar($_SESSION['usuario']);
-            ?>
-        </tbody>
-    </table>
-    <h2>Alumnos de mis proyectos: </h2>
-    <table>
-        <thead>
-            <th>DNI</th>
-            <th>Nombre</th>
-            <th>Primer apellido</th>
-            <th>Segundo apellido</th>
-            <th>Email</th>
-            <th>Teléfono</th>
-            <th>Curso</th>
-        </thead>
-        <tbody>
-            <?php
-                visualizarAlumnosPorTutor($_SESSION['usuario']);
             ?>
         </tbody>
     </table>

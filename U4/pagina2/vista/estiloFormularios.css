@@ -1,3 +1,17 @@
+header{
+    text-align: center;
+    background-color: #E6FEFF;
+    padding: 10px 0px 10px 0px;
+    margin: -5px;
+}
+#borrar{
+    position: absolute;
+    margin-left: 600px;
+    margin-top: -50px;
+    width: 150px;
+    background-color: blue;
+    border-radius: 15px;
+}
 form{
     position: absolute;
     padding: 10px;
@@ -5,6 +19,8 @@ form{
     border-radius: 8px;
     background: linear-gradient(to bottom, #008B8B,#E0FFFF);
     border-color: 	#2F4F4F;
+    margin-left:700px;
+    margin-top: 100px;
 }
 input{
     border-radius: 5px;

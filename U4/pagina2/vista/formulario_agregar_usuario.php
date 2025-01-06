@@ -28,11 +28,8 @@
             <input type="text" id="apellidos" name="apellidos"><br><br>
 
             <input type='submit' value="Enviar" id="enviar"><br>
-            <button><a href="../vista/paginaAdmin.php"></a>Cancelar</button>
+            <button><a href="inicioSesion.php"></a>Cancelar</button>
         </form>
     </main>
-    <footer>
-        <h4>Miguel Fernández</h4>
-    </footer>
 </body>
 </html>

@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="estiloSesion.css">
 </head>
 <body>
+    <header>
+        <h1>Inicio de sesión</h1>
+    </header>
     <!-- Solo funciona el boton de registrarse si no hacemos una acción antes, si la hacemos nos cambia de carpeta de forma misteriosa -->
-<button id="Insertar"><a href="formulario_agregar_usuario.php" id="insertar">Registrarse</a></button>
     <form action="../controlador/login.php" method="post">
         <fieldset>
             <legend>Inicio de Sesión</legend>
@@ -29,7 +32,10 @@
             <label for="password">Contraseña: </label><br>
             <input type="password" name="password" id="password" maxlength="50"><br><br>
 
-            <input type="submit" value="Enviar" name="enviar">
+            <div id="cajaEnvios">
+            <input type="submit" value="Enviar" name="enviar" id="enviar">
+            <button id="Insertar"><a href="formulario_agregar_usuario.php" id="insertar">Registrarse</a></button>
+            </div>
         </fieldset>
     </form>
 </body>

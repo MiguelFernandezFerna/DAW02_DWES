@@ -9,6 +9,7 @@
 <body>
     <header>
         <h1>Procederemos a agregar un proyecto nuevo:</h1>
+        <button id="borrar"><a href="../../controlador/logout.php">Cerrar sesión</a></button>
     </header>
     <main>
         <form action="../../controlador/admin/insertar.php" method="POST" enctype="multipart/form-data">
@@ -122,8 +123,5 @@
             <button><a href='paginaAdmin.php'>Cancelar</a></button>
         </form>
     </main>
-    <footer>
-        <h4>Miguel Fernández</h4>
-    </footer>
 </body>
 </html>
