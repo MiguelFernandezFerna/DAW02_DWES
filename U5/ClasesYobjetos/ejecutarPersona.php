@@ -32,4 +32,9 @@
     // echo $emp->getDatosCompleto();
     // echo "<br>";
     // echo $emp->debePagarImpuestos();
-    
+    $emp = new Empleado();
+    $emp ->setNombre("Jorge");
+    $emp ->setApellido("Garcia");
+    $emp -> setSueldo(1600);
+    $emp -> anadirTelefono(475632875);
+    echo $emp -> listarTelefonos();

@@ -40,9 +40,9 @@
                 }
                 
             }
-            public function __construct(string $nom, string $ape, int $sue){
-                $this->nombre=$nom;
-                $this->apellido = $ape;
-                $this->sueldo = $sue;
-            }
+            // public function __construct(string $nom, string $ape, int $sue){
+            //     $this->nombre=$nom;
+            //     $this->apellido = $ape;
+            //     $this->sueldo = $sue;
+            // }
         }
