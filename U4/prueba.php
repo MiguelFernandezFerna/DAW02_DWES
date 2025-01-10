@@ -12,6 +12,7 @@
 $fp = fopen("hola.txt", "r");
 if ($fp === FALSE) {
 echo "No existe el fichero o no se pudo leer<br>";
+echo "Prueba para ver si guarda en git";
 }else{
 while(!feof($fp) ){
 $car=fgetc($fp);
