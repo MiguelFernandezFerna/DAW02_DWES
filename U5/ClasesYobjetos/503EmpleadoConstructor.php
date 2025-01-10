@@ -26,7 +26,7 @@
             }
 
             public function getDatosCompleto():string{
-                return $this->nombre." ".$this->apellido." ".$this->sueldo." ".$this->telefonos;
+                return $this->nombre." ".$this->apellido." ".$this->sueldo;
             }
 
             public function debePagarImpuestos():bool{
@@ -36,11 +36,6 @@
                     return false;
                 }
             }
-            // public function __construct(string $nom, string $ape, int $sue){
-            //     $this->nombre=$nom;
-            //     $this->apellido = $ape;
-            //     $this->sueldo = $sue;
-            // }
 
             public function anadirTelefono(int $telefono):void{
                 array_push(($this->telefonos), $telefono);
@@ -56,5 +51,11 @@
 
             public function vaciarTelefonos():void{
                 $this->telefonos = [];
+            }
+
+            public function __construct(string $nom, string $ape, int $sue = 1000){
+                $this->nombre=$nom;
+                $this->apellido = $ape;
+                $this->sueldo = $sue;
             }
         }
