@@ -1,6 +1,7 @@
 <?php
     include("clases.php");
     include("504EmpleadoConstante.php");
+    include("claseEstatica.php");
     //Lo comento porque en el archivo al que llamamos hemos metido una 
     //funcion magica __construct que tiene 2 parametros, por tanto solo
     //nos deja psarle 2 parametros
@@ -27,9 +28,3 @@
     echo $personaDeserializable->getNombre()." ";
     echo $personaDeserializable->getApellido();
 
-    echo "<br>";
-    $emp = new Empleado("Juan","Fernandez",1501);
-    $emp ->anadirTelefono(837465973);
-    echo $emp->getDatosCompleto();
-    echo "<br>";
-    echo $emp -> debePagarImpuestos();
