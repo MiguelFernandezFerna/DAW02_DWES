@@ -21,6 +21,10 @@ class Tv extends Producto{
         echo "<p>Codigo:".$this->codigo."</p>";
         echo "<p>Pulgadas:".$this->pulgadas."</p>";
     }
+	public function __construct() {
+        // Hago esto para que no de error, funciona igual, pero mejor arreglado
+    }
+
 }
 
 $t = new Tv();
