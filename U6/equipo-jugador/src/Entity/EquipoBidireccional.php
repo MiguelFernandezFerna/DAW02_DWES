@@ -217,4 +217,8 @@ class EquipoBidireccional
 
         return $this;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c3e8c24d23d766ceb02ef302cbdda708f8db2c75
