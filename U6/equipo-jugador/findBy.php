@@ -62,8 +62,4 @@ foreach($equipos as $equipo){
     echo "Nombre: ". $equipo->getNombre(). "<br>";
     echo "Fundacion: ". $equipo->getFundacion(). "<br>";
     echo "Socios: ". $equipo->getSocios(). "<br><br>";
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> c3e8c24d23d766ceb02ef302cbdda708f8db2c75
