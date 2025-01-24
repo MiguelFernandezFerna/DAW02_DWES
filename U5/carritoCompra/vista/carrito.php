@@ -35,6 +35,6 @@ require_once '../controlador/controlador.php';
     <?php endif; ?>
 
     <p><a href="productos.php">Volver a la lista de productos</a></p>
-    <p><a href="realizar_pago.php">Realizar Pago</a></p>
+    <p><a href="realizar_pago.php">Pagar</a></p>
 </body>
 </html>
