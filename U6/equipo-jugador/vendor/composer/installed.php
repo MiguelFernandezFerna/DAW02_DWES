@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
-        'name' => 'miguel.ferfer/equipo-jugador',
+        'name' => 'propietario/equipo-jugador',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '82187693f5a32e43b8c104f168992f67ff5bf2c0',
+        'reference' => 'cc7042b73ae1449ea5943112e8b471d869f985c7',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -118,10 +118,10 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'miguel.ferfer/equipo-jugador' => array(
+        'propietario/equipo-jugador' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '82187693f5a32e43b8c104f168992f67ff5bf2c0',
+            'reference' => 'cc7042b73ae1449ea5943112e8b471d869f985c7',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
