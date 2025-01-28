@@ -83,5 +83,14 @@
     $consulta9 = $entityManager->createQuery('UPDATE jugador j SET j.edad = j.edad + 1 WHERE j.edad > :edad');
     $consulta9->setParameter('edad', $edad3);  //para prevenir inyeccion sql
     if ($filasAfectadas = $consulta9->execute()) {
-        echo "Se ha ejecutado:";
+        echo "Se ha ejecutado <br>";
     }
+    echo "--------------------------------------------------<br>";
+    echo "Borramos un jugador donde su edad sea mayor que 30: <br><br>";
+    $edad3 = 30;
+    $consulta10 = $entityManager->createQuery('DELETE FROM jugador j WHERE j.edad > :edad');
+    $consulta10->setParameter('edad', $edad3);  //para prevenir inyeccion sql
+    if ($filasAfectadas = $consulta10->execute()) {
+        echo "Se ha Borrado";
+    }
+    
