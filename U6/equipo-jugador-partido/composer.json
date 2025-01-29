@@ -1,0 +1,23 @@
+{
+    "name": "propietario/equipo-jugador-partido",
+    "description": "Equipos con jugadores que juegan partidos",
+    "type": "project",
+    "require": {
+        "doctrine/orm": "^2.17",
+        "doctrine/cache": "^1.1",
+        "doctrine/annotations": "^2.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Propietario\\EquipoJugadorPartido\\": "src/",
+            "Propietario\\EquipoJugadorPartido\\Entity\\": "src/Entity/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MiguelFF"
+        }
+    ],
+    "minimum-stability": "stable"
+}
