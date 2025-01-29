@@ -3,7 +3,7 @@
 require_once "bootstrap.php";
 require_once './src/Entity/Equipo.php';
 // buscar por clave primaria
-$eq = $entityManager->find("Equipo", 1);
+$eq = $entityManager->find("Equipo", 7);
 // mostrar datos
 echo $eq->getSocios();
 // cambiar el número de socios

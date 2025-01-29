@@ -19,8 +19,8 @@ if($jugadores === -1)
 		}
 }
 echo"<br>";
-	// Este falla
-	$jugadores = $entityManager->getRepository('Equipo')->getLista("Manchester");
+	
+	$jugadores = $entityManager->getRepository('Equipo')->getLista("Manchester City");
 	if($jugadores === -1)
 	{
 		echo "Equipo no encontrado";
@@ -29,5 +29,31 @@ echo"<br>";
 		foreach($jugadores as $jugador)
 		{
 			echo "Nombre: ". $jugador->getNombre(). " ". $jugador->getApellidos(). "<br>";
+		}
+}
+echo"<br>";
+	
+	$jugadores = $entityManager->getRepository('Equipo')->getNombreEdad(29);
+	if($jugadores === -1)
+	{
+		echo "Equipo no encontrado";
+	}
+	else{
+		foreach($jugadores as $jugador)
+		{
+			echo "Nombre: ". $jugador["nombre"]."<br>";
+		}
+}
+echo"<br>";
+	
+	$jugadores = $entityManager->getRepository('Equipo')->getListaTablas();
+	if($jugadores === -1)
+	{
+		echo "Equipo no encontrado";
+	}
+	else{
+		foreach($jugadores as $jugador)
+		{
+			echo "Nombre: ". $jugador["jugador"]." - Equipo: ".$jugador["equipo"]."<br>";
 		}
 }
