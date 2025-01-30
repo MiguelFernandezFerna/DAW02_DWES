@@ -38,9 +38,9 @@ class Partido
     /**
      * @var \DateTime|null
      *
-     * @ORM\Column(name="fehca", type="date", nullable=true)
+     * @ORM\Column(name="fecha", type="date", nullable=true)
      */
-    private $fehca;
+    private $fecha;
 
     /**
      * @var \Equipo
@@ -63,4 +63,134 @@ class Partido
     private $visitante;
 
 
+
+    /**
+     * Get the value of idPartido
+     *
+     * @return  bool
+     */ 
+    public function getIdPartido()
+    {
+        return $this->idPartido;
+    }
+
+    /**
+     * Get the value of golesLocal
+     *
+     * @return  int|null
+     */ 
+    public function getGolesLocal()
+    {
+        return $this->golesLocal;
+    }
+
+    /**
+     * Set the value of golesLocal
+     *
+     * @param  int|null  $golesLocal
+     *
+     * @return  self
+     */ 
+    public function setGolesLocal($golesLocal)
+    {
+        $this->golesLocal = $golesLocal;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of golesVisitante
+     *
+     * @return  int|null
+     */ 
+    public function getGolesVisitante()
+    {
+        return $this->golesVisitante;
+    }
+
+    /**
+     * Set the value of golesVisitante
+     *
+     * @param  int|null  $golesVisitante
+     *
+     * @return  self
+     */ 
+    public function setGolesVisitante($golesVisitante)
+    {
+        $this->golesVisitante = $golesVisitante;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of fecha
+     *
+     * @return  \DateTime|null
+     */ 
+    public function getFecha()
+    {
+        return $this->fecha;
+    }
+
+    /**
+     * Set the value of fecha
+     *
+     * @param  \DateTime|null  $fecha
+     *
+     * @return  self
+     */ 
+    public function setFecha($fecha)
+    {
+        $this->fecha = $fecha;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of local
+     *
+     * @return  \Equipo
+     */ 
+    public function getLocal()
+    {
+        return $this->local;
+    }
+
+    /**
+     * Set the value of local
+     *
+     * @param  \Equipo  $local
+     *
+     * @return  self
+     */ 
+    public function setLocal(\Equipo $local)
+    {
+        $this->local = $local;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of visitante
+     *
+     * @return  \Equipo
+     */ 
+    public function getVisitante()
+    {
+        return $this->visitante;
+    }
+
+    /**
+     * Set the value of visitante
+     *
+     * @param  \Equipo  $visitante
+     *
+     * @return  self
+     */ 
+    public function setVisitante(\Equipo $visitante)
+    {
+        $this->visitante = $visitante;
+
+        return $this;
+    }
 }
