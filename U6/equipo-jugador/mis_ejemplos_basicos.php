@@ -1,9 +1,9 @@
 <?php
 // ejemplo_basicos.php
-require_once"bootstrap.php";
-require_once'./src/Entity/Equipo.php';
+require_once "bootstrap.php";
+require_once './src/Entity/Equipo.php';
 // buscar por clave primaria
-$codigoEq = filtrado($_GET['id_equipo']);
+$codigoEq = $_GET['id_equipo'];
 
 $eq = $entityManager->find("Equipo", $codigoEq);
 // mostrar datos

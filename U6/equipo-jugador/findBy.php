@@ -2,6 +2,7 @@
 require_once "bootstrap.php";
 require_once './src/Entity/Jugador.php';
 require_once './src/Entity/Equipo.php';
+require_once './src/Entity/EquipoRepository.php';
 
 /*Con findBy/findOneBy:
 - Jugadores con exactamente XX años..*/

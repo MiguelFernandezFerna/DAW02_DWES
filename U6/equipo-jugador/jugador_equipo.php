@@ -4,7 +4,7 @@
   require_once './src/Entity/Jugador.php';
   //$id = $_GET['id'];
   /*buscar el jugador con el id indicado*/
-  $jugador = $entityManager->find("Jugador", 2);
+  $jugador = $entityManager->find("Jugador", 1);
   if(!$jugador){
     echo "Jugador no encontrado";
   }else{
