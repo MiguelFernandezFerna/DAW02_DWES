@@ -11,9 +11,9 @@
 //Primera manera de escribir en php
         echo "Hola mundo tipo 1";
     ?>
- <br>  
+<br>  
     <?php 
-     #Segunda manera
+    #Segunda manera
     print("Hola mundo tipo 2"); 
     ?>
   <br>  
